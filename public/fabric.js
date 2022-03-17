@@ -142,8 +142,7 @@ $('.save1').click(function(){
 //alert($('#sku1').val());
 var sku = $('#sku1').val();
     json = canvas.toJSON();
-    //url = "http://localhost:3000/api/products";
-    url ="https://bnp-next.herokuapp.com/api/products";
+    url = "http://localhost:3000/api/products";
     var string_json = JSON.stringify(json);
     var SendInfo= { canvas: string_json, name:sku, price:'400', mediaUrl:'tt',description:'test'};
     
@@ -174,8 +173,7 @@ $('.restore1').click(function(){
     //alert(JSON.stringify(json));
     //json = canvas.toJSON();
     var sku_val =$('#sku11').val();
-    //url = process.env.URL+"/api/products?name="+sku_val;
-    url="https://bnp-next.herokuapp.com/api/products?name="+sku_val;
+    url = "http://localhost:3000/api/products?name="+sku_val;
     
     $.ajax({
         type: "GET",

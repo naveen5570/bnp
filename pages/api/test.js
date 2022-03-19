@@ -1,6 +1,6 @@
 import initDB from '../../helpers/initDB'
 import Product from '../../models/Product'
-
+initDB()
 export default async(req, res) => {
     try{
         //console.log('test=>'+req.query.name);

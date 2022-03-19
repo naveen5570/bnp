@@ -5,7 +5,7 @@ function initDB(){
         console.log("already connected")
         return
     }
-    mongoose.connect("mongodb+srv://naveen123:Pass123@cluster0.nxrhl.mongodb.net/bnp",{
+    mongoose.connect(process.env.MONGODB_URI,{
         useNewUrlParser:true,
         useUnifiedTopology:true
     })
